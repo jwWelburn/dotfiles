@@ -1,0 +1,58 @@
+/* Geneal Window Style */
+window {
+  margin: 0px;
+  border: 3px solid #ffffff;  /* Adwaita Dark border */
+  background-color: #000000;   /* Adwaita Dark background */
+  font-family: Adwaita Sans;  /* Adwaita font */
+  width: 40%;
+}
+
+/* Input Field */
+#input {
+  margin: 5px;
+  border-color: #ffffff;
+  color: #ffffff;              /* Adwaita Dark text color */
+  background-color: #000000;   /* Dark input background */
+  border-radius: 0;
+  border: 2px solid #ffffff;
+}
+
+/* Inner Box Style */
+#inner-box {
+  margin: 5px;
+  border: none;
+  background-color: #000000;   /* Adwaita Dark background */
+}
+
+/* Outer Box Style */
+#outer-box {
+  margin: 5px;
+  border: none;
+  background-color: #000000;   /* Adwaita Dark background */
+}
+
+
+
+/* Text Area */
+#text {
+  margin: 5px;
+  border: none;
+  color: #ffffff;              /* Adwaita Dark text color */
+}
+
+/* Text Selection Style */
+#text:selected {
+  color: #000000;
+}
+
+/* Image Selection Style */
+#img:selected {
+  background: none;
+}
+
+/* Entry Selected Style */
+#entry:selected {
+  background: #ffffff;
+}
+
+
