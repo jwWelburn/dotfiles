@@ -1,0 +1,195 @@
+/* Keyframes */
+
+@keyframes blink-critical {
+	to {
+		color: @white;
+		border-color: @white;
+	}
+}
+
+/* Colors */
+@define-color black   #000000;
+@define-color red     #e01b24;
+@define-color green   #33d17a;
+@define-color yellow  #f9f06b;
+@define-color blue    #3584e4;
+@define-color purple  #9141ac;
+@define-color gray    #9a9996;
+@define-color white   #eceff4;
+@define-color bg2     #f6f5f4;
+
+/* Reset all styles */
+* {
+	border: none;
+	border-radius: 0;
+	min-height: 0;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+	text-shadow: none;
+	-gtk-icon-shadow: none;
+}
+
+/* The whole bar */
+#waybar {
+	background: @black;
+	color: @white;
+	font-family: Adwaita Sans;
+	font-size: 15pt;
+}
+
+/* Each module */
+#battery,
+#clock,
+#language,
+#network,
+#pulseaudio,
+#tray,
+#mpris {
+	padding-left: 8pt;
+	padding-right: 8pt;
+}
+
+/* Critical Modules */
+
+#battery.critical.discharging {
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-name: blink-critical;
+	animation-duration: 0.5s;
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @red;
+	border-bottom: 2px solid;
+	background-color: transparent;
+}
+
+/* Warning */
+
+#network.disconnected,
+#battery.warning.discharging {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @yellow;
+	border-bottom: 2px solid;
+	background-color: transparent;
+}
+
+/* Modules */
+
+#workspaces button {
+	padding-left: 2pt;
+	padding-right: 2pt;
+	color: @white;
+}
+
+
+#workspaces button.visible {
+	color: @black;
+	background: @white; 
+}
+
+#workspaces button.focused {
+	color: @black;
+}
+
+#workspaces button.urgent {
+	color: @black;
+	background: @yellow;
+}
+
+#window {
+	margin-right: 35pt;
+	margin-left: 35pt;
+}
+
+#pulseaudio {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @white;
+	border-bottom: 2px solid;
+}
+
+#network {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @white;
+	border-bottom: 2px solid;
+}
+
+#custom-hyprsunset {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @white;
+	border-bottom: 2px solid;
+}
+
+#language {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @white;
+	border-bottom: 2px solid;
+	
+}
+
+#battery {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @white;
+	border-bottom: 2px solid;
+
+
+}
+
+#tray {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	color: @white;
+	border-bottom: 2px solid;
+}
+
+#clock.date {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @white;
+	border-bottom: 2px solid;
+}
+
+#clock.time {
+	margin-top: 0px;
+	margin-left: 8px;
+	padding-left: 5px;
+	padding-right: 5px;
+	margin-bottom: 0px;
+	color: @white;
+	border-bottom: 2px solid;
+}
+
+

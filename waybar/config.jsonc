@@ -1,0 +1,105 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "modules-left": [
+    "hyprland/workspaces"
+  ],
+
+  "modules-right": [
+    "tray",
+    "custom/hyprsunset",
+    "network",
+    "battery",
+    "pulseaudio",
+    "hyprland/language",
+    "clock#time"
+  ],
+
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format-time": "{H}:{M:02}",
+    "format": "{icon} {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-charging-full": " {capacity}%",
+    "format-full": "{icon} {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "tooltip": false
+  },
+
+  "clock#time": {
+    "interval": 10,
+    "format": " {:%d/%m/%y %H:%M}",
+    "tooltip": false
+  },
+
+  "clock#date": {
+    "interval": 20,
+    "format": "{:%d/%m/%y}",
+    "tooltip": false
+  },
+
+  "hyprland/language": {
+    "format": " {}",
+    "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next && pkill -SIGRTMIN+10 waybar",
+    "tooltip": false,
+    "signal": 10
+  },
+
+  "network": {
+    "interval": 5,
+    "format-wifi": "",
+    "format-ethernet": "",
+    "format-disconnected": "No Connection",
+    "format-alt": " {essid}/{ipaddr}/{cidr}",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "disable-scroll-wraparound": true,
+    "smooth-scrolling-threshold": 4,
+    "enable-bar-scroll": true,
+    "format": "{name}"
+  },
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", ""]
+    },
+    "scroll-step": 1,
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+  "tray": {
+    "icon-size": 18
+    // "spacing": 10
+  },
+
+  "custom/hyprsunset": {
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/toggle_hyprsunset.sh",
+    "interval": 10
+  }
+}
+
