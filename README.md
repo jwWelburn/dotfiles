@@ -25,3 +25,4 @@ My personal minimal config for Hyprland on Arch Linux.
 |Theme Manager  |nwg-look     |
 |Icons          |papirus-dark |
 |Image Viewer   |feh          |
+|PDF Viewer     |zathura      |
