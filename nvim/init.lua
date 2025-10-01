@@ -6,7 +6,7 @@ vim.api.nvim_set_hl(0, "EndOfBuffer", { bg = "none" })
 -- Settings
 vim.opt.number = true
 vim.opt.cursorline = true
-vim.opt.wrap = true
+vim.opt.wrap = false
 
 -- Indentation
 vim.opt.tabstop = 4

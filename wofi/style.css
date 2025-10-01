@@ -1,58 +1,42 @@
-/* Geneal Window Style */
-window {
-  margin: 0px;
-  border: 3px solid #ffffff;  /* Adwaita Dark border */
-  background-color: #000000;   /* Adwaita Dark background */
-  font-family: Adwaita Sans;  /* Adwaita font */
-  width: 40%;
+* {
+  font-family: AdwaitaSans;
+  color: #ffffff;
+  background: transparent;
 }
 
-/* Input Field */
+#window {
+  background: rgba(0, 0, 0, 0.7);
+  margin: 5px;
+  padding: 10px;
+  border-radius: 0px;
+  border: 3px solid #ffffff;
+}
+
 #input {
-  margin: 5px;
-  border-color: #ffffff;
-  color: #ffffff;              /* Adwaita Dark text color */
-  background-color: #000000;   /* Dark input background */
-  border-radius: 0;
-  border: 2px solid #ffffff;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 0px;
+  border: 3px solid #ffffff;
 }
 
-/* Inner Box Style */
-#inner-box {
-  margin: 5px;
-  border: none;
-  background-color: #000000;   /* Adwaita Dark background */
-}
-
-/* Outer Box Style */
 #outer-box {
-  margin: 5px;
-  border: none;
-  background-color: #000000;   /* Adwaita Dark background */
+  padding: 20px;
 }
 
-
-
-/* Text Area */
-#text {
-  margin: 5px;
-  border: none;
-  color: #ffffff;              /* Adwaita Dark text color */
+#img {
+  margin-right: 6px;
 }
 
-/* Text Selection Style */
+#entry {
+  padding: 10px;
+  border-radius: 0px;
+}
+
+#entry:selected {
+  background-color: #ffffff;
+  border-radius: 0px;
+}
+
 #text:selected {
   color: #000000;
 }
-
-/* Image Selection Style */
-#img:selected {
-  background: none;
-}
-
-/* Entry Selected Style */
-#entry:selected {
-  background: #ffffff;
-}
-
-

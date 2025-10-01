@@ -9,10 +9,13 @@
   "modules-right": [
     "tray",
     "custom/hyprsunset",
+	// "custom/pomodoro",
     "network",
     "battery",
     "pulseaudio",
     "hyprland/language",
+	"cpu",
+	"memory",
     "clock#time"
   ],
 
@@ -51,7 +54,7 @@
   },
 
   "hyprland/language": {
-    "format": " {}",
+    "format": " ({short})",
     "on-click": "hyprctl switchxkblayout at-translated-set-2-keyboard next && pkill -SIGRTMIN+10 waybar",
     "tooltip": false,
     "signal": 10
@@ -62,7 +65,7 @@
     "format-wifi": "",
     "format-ethernet": "",
     "format-disconnected": "No Connection",
-    "format-alt": " {essid}/{ipaddr}/{cidr}",
+    "on-click": "kitty nmtui",
     "tooltip": false
   },
 
@@ -100,6 +103,24 @@
     "format": "",
     "on-click": "~/.config/waybar/scripts/toggle_hyprsunset.sh",
     "interval": 10
+  },
+  "memory":  {
+    "interval": 5,
+    "format": " {percentage}%",
+    "tooltip-format": "{used:0.1f}G / {total:0.1f}G ({percentage}%)"
+  },
+
+  "cpu": {
+  "interval": 5,
+  "format": " {usage}%"
+  },
+
+  "custom/pomodoro": {
+	"on-click": "kitty -e ~/.config/waybar/scripts/pomodoro.py",
+    "format": "",
+	"interval": 1
   }
+
+
 }
 
